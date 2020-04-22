@@ -3,10 +3,45 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: servant-0.17@sha256:e78734cb6b75c5d1e52e8f5e16bc3f557154a580bbde4932a7e1a6a90da7eb04,5029
+    pantry-tree:
+      size: 2392
+      sha256: 36561a606c35393386aa48b7cc2407fa4013aba62a19d69f004ec9c2010209aa
+  original:
+    hackage: servant-0.17
+- completed:
+    hackage: servant-client-0.17@sha256:433be65dd541b9a387eaaced22715a028ea846d72d141419c40ddf6fd5e3409b,4573
+    pantry-tree:
+      size: 1299
+      sha256: 1f8f57c6ce96ed4f1316460aaab48f3765b2addbf1e2cd363c72bbc41fdcf907
+  original:
+    hackage: servant-client-0.17
+- completed:
+    hackage: servant-client-core-0.17@sha256:d64622d68d8a6934abc821171582d601a99ef0277f3d8b8ba9b483c2617e3df6,3577
+    pantry-tree:
+      size: 1444
+      sha256: 89461980a2562d9943f4bb84077d8c4a8c5bac76c8c16577c9344e404b2e9fb1
+  original:
+    hackage: servant-client-core-0.17
+- completed:
+    hackage: servant-server-0.17@sha256:1a5adf564f0b703535eb733f249b282ef2ca7b587a303c357b549fb88e7a6dcd,5388
+    pantry-tree:
+      size: 2460
+      sha256: ea65ba54acb4362efedbfa7db616a51023579a6c83f18ab6d2ea6a84dea56021
+  original:
+    hackage: servant-server-0.17
+- completed:
+    hackage: servant-docs-0.11.5@sha256:2c78eaa6f6bf7d2832de6fb4843ec526669e68c7d002c201353c08547ed781f0,3284
+    pantry-tree:
+      size: 702
+      sha256: 23ea4145b94acf5878744a4d9af40873c4753ca54811f90dc0eb5a1752759f7c
+  original:
+    hackage: servant-docs-0.11.5
 snapshots:
 - completed:
-    size: 545658
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/12.yaml
-    sha256: 26b807457213126d26b595439d705dc824dbb7618b0de6b900adc2bf6a059406
-  original: lts-14.12
+    size: 524996
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/27.yaml
+    sha256: 7ea31a280c56bf36ff591a7397cc384d0dff622e7f9e4225b47d8980f019a0f0
+  original: lts-14.27

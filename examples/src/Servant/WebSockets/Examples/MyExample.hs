@@ -62,15 +62,15 @@ mkMyServer state = MyRoutes { chat }
       start =<< WS.acceptRequest pendingConn
     where
     start conn = do
-      WS.forkPingThread conn 30
-      flip finally disconnect $ do
-        s <- readMVar state
-        WS.sendTextData conn $ case s of
-          [] -> "Welcome!"
-          _  -> "Welcome! Users: " <> Text.intercalate ", " (map fst s)
-        broadcast $ user <> " joined"
-        modifyMVar_ state $ pure . ((user, conn) :)
-        talk conn
+      WS.withPingThread conn 30 (pure ()) $ do -- TODO use bracket here
+        flip finally disconnect $ do
+          s <- readMVar state
+          WS.sendTextData conn $ case s of
+            [] -> "Welcome!"
+            _  -> "Welcome! Users: " <> Text.intercalate ", " (map fst s)
+          broadcast $ user <> " joined"
+          modifyMVar_ state $ pure . ((user, conn) :)
+          talk conn
 
     disconnect = do
       modifyMVar_ state $ pure . filter ((user /=) . fst)

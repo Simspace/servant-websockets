@@ -1,4 +1,4 @@
-resolver: lts-14.12
+resolver: lts-14.27
 
 packages:
 - ./core
@@ -7,3 +7,10 @@ packages:
 - ./docs
 - ./examples
 - ./test
+
+extra-deps:
+  - servant-0.17
+  - servant-client-0.17
+  - servant-client-core-0.17
+  - servant-server-0.17
+  - servant-docs-0.11.5
